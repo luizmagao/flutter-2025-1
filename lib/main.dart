@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const BancoDouroApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class BancoDouroApp extends StatelessWidget {
+  const BancoDouroApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    // return const Text("Sistema de gestão de contas");
+    return MaterialApp(home: const Text("Sistema de gestão de contas"));
   }
 }
