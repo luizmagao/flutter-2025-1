@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_flutter/ui/home_screen.dart';
 import 'package:projeto_flutter/ui/login_screen.dart';
 
 void main() {
@@ -12,9 +13,13 @@ class BancoDouroApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // return const Text("Sistema de gestão de contas");
     // return MaterialApp(home: const Text("Sistema de gestão de contas"));
-    return const MaterialApp(
+    return MaterialApp(
+      routes: {
+        'login': (context) => LoginScreen(),
+        'home': (context) => HomeScreen(),
+      },
       // home: Scaffold(body: Center(child: Text("Sistema de gestão de contas"))),
-      home: LoginScreen(),
+      initialRoute: 'login',
     );
   }
 }
