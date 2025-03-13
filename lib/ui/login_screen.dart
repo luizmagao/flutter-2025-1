@@ -7,13 +7,24 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // return Scaffold(body: Center(child: Text("Sistema de gestão de contas")));
     return Scaffold(
-      body: Column(
-        children: [
-          Text("Sistema de gestão de contas"),
-          TextFormField(),
-          TextFormField(),
-          ElevatedButton(onPressed: () {}, child: Text("Entrar")),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Sistema de gestão de contas",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 32),
+            ),
+            TextFormField(decoration: InputDecoration(label: Text("E-mail"))),
+            TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(label: Text("Senha")),
+            ),
+            ElevatedButton(onPressed: () {}, child: Text("Entrar")),
+          ],
+        ),
       ),
     );
   }
