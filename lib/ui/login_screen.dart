@@ -44,7 +44,10 @@ class LoginScreen extends StatelessWidget {
                           Color(0xFFFFA902),
                         ),
                       ),
-                      onPressed: () => {},
+                      onPressed:
+                          () => {
+                            Navigator.pushReplacementNamed(context, "home"),
+                          },
                       child: Text(
                         "Enviar",
                         style: TextStyle(color: Colors.black),
