@@ -1,4 +1,6 @@
+import 'package:bancodouro/models/account.dart';
 import 'package:bancodouro/ui/styles/app_colors.dart';
+import 'package:bancodouro/ui/widgets/account_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,6 +18,14 @@ class HomeScreen extends StatelessWidget {
             icon: Icon(Icons.logout),
           ),
         ],
+      ),
+      body: AccountWidget(
+        account: Account(
+          id: 'NEW01',
+          name: "Luiz",
+          lastName: "Lins",
+          balance: 8.000,
+        ),
       ),
     );
   }
