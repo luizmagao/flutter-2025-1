@@ -1,3 +1,4 @@
+import 'package:bancodouro/ui/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -41,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: WidgetStatePropertyAll(
-                          Color(0xFFFFA902),
+                          AppColors.orange,
                         ),
                       ),
                       onPressed:

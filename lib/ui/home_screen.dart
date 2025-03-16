@@ -1,3 +1,4 @@
+import 'package:bancodouro/ui/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF0F0F0),
+        backgroundColor: AppColors.lightGrey,
         title: const Text("Sistema de gestão de contas"),
         actions: [
           IconButton(
