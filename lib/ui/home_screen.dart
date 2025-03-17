@@ -19,12 +19,15 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: AccountWidget(
-        account: Account(
-          id: 'NEW01',
-          name: "Luiz",
-          lastName: "Lins",
-          balance: 8.000,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: AccountWidget(
+          account: Account(
+            id: 'NEW01',
+            name: "Luiz",
+            lastName: "Lins",
+            balance: 8.000,
+          ),
         ),
       ),
     );
