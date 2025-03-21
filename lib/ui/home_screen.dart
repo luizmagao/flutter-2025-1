@@ -34,7 +34,20 @@ class HomeScreen extends StatelessWidget {
                 return const Center(child: CircularProgressIndicator());
               case ConnectionState.done:
                 {
-                  return Text("Operacao finalizada");
+                  if (snapshot.data == null || snapshot.data!.isEmpty) {
+                    return const Center(
+                      child: Text('Nenhuma conta encontrada.'),
+                    );
+                  }
+
+                  List<Account> listAccounts = snapshot.data!;
+                  return ListView.builder(
+                    itemCount: listAccounts.length,
+                    itemBuilder: (context, index) {
+                      Account account = listAccounts[index];
+                      return AccountWidget(account: account);
+                    },
+                  );
                 }
             }
           },

@@ -5,7 +5,7 @@ import 'package:bancodouro/services/git_token.dart';
 import 'package:http/http.dart';
 
 class AccountService {
-  String url = "https://git.github.com/gits/161bd7cb770eb19256b8dc6055d53503";
+  String url = "https://api.github.com/gists/161bd7cb770eb19256b8dc6055d53503";
 
   Future<List<Account>> getAll() async {
     Response response = await get(
@@ -15,8 +15,9 @@ class AccountService {
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
     List<dynamic> listDynamic = json.decode(
-      mapResponse["files"]["account.json"]["content"],
+      mapResponse["files"]["accounts.json"]["content"],
     );
+
     List<Account> listAccounts = [];
 
     for (dynamic dyn in listDynamic) {
@@ -24,6 +25,7 @@ class AccountService {
       Account account = Account.fromMap(mapAccount);
       listAccounts.add(account);
     }
-    return json.decode(response.body);
+
+    return listAccounts;
   }
 }
