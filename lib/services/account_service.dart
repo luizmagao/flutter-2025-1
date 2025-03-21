@@ -9,9 +9,7 @@ class AccountService {
   Future<List<Account>> getAll() async {
     Response response = await get(
       Uri.parse(url),
-      headers: {
-        "Authorization": "Bearer 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",
-      },
+      headers: {"Authorization": "Bearer "},
     );
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
