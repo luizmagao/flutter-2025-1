@@ -10,7 +10,7 @@ class AccountService {
   Future<List<Account>> getAll() async {
     Response response = await get(
       Uri.parse(url),
-      headers: {"Authorization": "Bearer ${gitToken}"},
+      headers: {"Authorization": "Bearer $gitToken"},
     );
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
