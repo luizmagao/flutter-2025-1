@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:bancodouro/models/account.dart';
+import 'package:bancodouro/services/git_token.dart';
 import 'package:http/http.dart';
 
 class AccountService {
@@ -9,7 +10,7 @@ class AccountService {
   Future<List<Account>> getAll() async {
     Response response = await get(
       Uri.parse(url),
-      headers: {"Authorization": "Bearer "},
+      headers: {"Authorization": "Bearer ${gitToken}"},
     );
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
