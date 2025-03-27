@@ -13,8 +13,9 @@ class AccountService {
     );
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
-    List<dynamic> listDynamic =
-        mapResponse['files']['accounts.json']['content'];
+    List<dynamic> listDynamic = json.decode(
+      mapResponse['files']['accounts.json']['content'],
+    );
 
     List<Account> listAccounts = [];
 

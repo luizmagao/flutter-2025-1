@@ -11,6 +11,7 @@ class AccountWidget extends StatelessWidget {
     return Container(
       height: 128,
       padding: EdgeInsets.all(16),
+      margin: EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: AppColors.lightOrange,
         borderRadius: BorderRadius.circular(12),
