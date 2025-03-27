@@ -9,8 +9,8 @@ class AccountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 128,
-      padding: EdgeInsets.all(16),
+      height: 100,
+      padding: EdgeInsets.all(10),
       margin: EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
         color: AppColors.lightOrange,
