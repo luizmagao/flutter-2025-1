@@ -9,17 +9,21 @@ class AccountService {
   Future<List<Account>> getAll() async {
     Response response = await get(
       Uri.parse(url),
-      headers: {'Authorization': 'Bearer ${tokenApiGithub}'},
+      headers: {'Authorization': 'Bearer $tokenApiGithub'},
     );
 
     Map<String, dynamic> mapResponse = json.decode(response.body);
     List<dynamic> listDynamic =
         mapResponse['files']['accounts.json']['content'];
 
+    List<Account> listAccounts = [];
+
     for (dynamic dyn in listDynamic) {
       Map<String, dynamic> mapAccount = dyn as Map<String, dynamic>;
+      Account account = Account.fromMap(mapAccount);
+      listAccounts.add(account);
     }
 
-    return listDynamic;
+    return listAccounts;
   }
 }
